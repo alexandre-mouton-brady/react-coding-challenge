@@ -1,0 +1,42 @@
+{
+  "name": "react-coding-challenge",
+  "version": "1.0.0",
+  "description": "> Welcome to the Stan Coding Challenge!",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "SET NODE_ENV=production&& node fuse",
+    "dev": "SET NODE_ENV=development&& node fuse dev"
+  },
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/alexandre-mouton-brady/react-coding-challenge.git"
+  },
+  "keywords": [],
+  "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url":
+      "https://github.com/alexandre-mouton-brady/react-coding-challenge/issues"
+  },
+  "homepage":
+    "https://github.com/alexandre-mouton-brady/react-coding-challenge#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cssnano": "^3.10.0",
+    "fuse-box": "^2.5.0-beta.1",
+    "postcss": "^6.0.14",
+    "postcss-import": "^11.0.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-router-dom": "^4.2.2",
+    "typescript": "^2.6.1",
+    "uglify-es": "^3.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1"
+  }
+}
