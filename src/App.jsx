@@ -16,8 +16,10 @@ export class App extends React.Component {
     return (
       <div className="layout">
         <Header />
+
         <main className="main">
           <h2 className="page-title">{this.state.currentTitle}</h2>
+
           <Route
             exact
             path="/"
@@ -34,6 +36,7 @@ export class App extends React.Component {
             render={() => <Series setTitle={this.setTitle} />}
           />
         </main>
+
         <Footer />
       </div>
     );

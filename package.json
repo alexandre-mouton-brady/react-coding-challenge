@@ -10,20 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/alexandre-mouton-brady/react-coding-challenge.git"
+    "url": "git+https://github.com/alexandre-mouton-brady/react-coding-challenge.git"
   },
   "keywords": [],
   "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url":
-      "https://github.com/alexandre-mouton-brady/react-coding-challenge/issues"
+    "url": "https://github.com/alexandre-mouton-brady/react-coding-challenge/issues"
   },
-  "homepage":
-    "https://github.com/alexandre-mouton-brady/react-coding-challenge#readme",
+  "homepage": "https://github.com/alexandre-mouton-brady/react-coding-challenge#readme",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },

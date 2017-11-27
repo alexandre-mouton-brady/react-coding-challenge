@@ -12,6 +12,9 @@
 
 .card {
   position: relative;
+  min-width: 140px;
+  max-width: 22%;
+  margin-bottom: 1rem;
   display: block;
 }
 

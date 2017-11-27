@@ -6,6 +6,7 @@ const {
   QuantumPlugin,
   WebIndexPlugin,
   Sparky,
+  EnvPlugin,
 } = require('fuse-box');
 
 let app; // Config variable
@@ -21,6 +22,7 @@ Sparky.task('config', () => {
     debug: true,
     target: 'browser',
     plugins: [
+      EnvPlugin({ node: process.env.NODE_ENV }),
       BabelPlugin({
         config: {
           sourceMaps: true,
@@ -44,7 +46,7 @@ Sparky.task('config', () => {
       ],
       WebIndexPlugin({
         template: 'src/index.html',
-        path: '/react-coding-challenge/',
+        path: isProd ? '/react-coding-challenge/' : '/',
       }),
       isProd &&
         QuantumPlugin({

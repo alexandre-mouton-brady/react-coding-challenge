@@ -8,12 +8,14 @@
 .footer-nav {
   display: flex;
   align-items: center;
+  overflow: auto;
 }
 
 .footer-nav__item {
   padding: 0 1rem;
   display: block;
   position: relative;
+  white-space: nowrap;
 }
 
 .footer-nav__item:first-of-type {
@@ -37,13 +39,16 @@
 .footer-links {
   display: flex;
   justify-content: space-between;
+  flex-flow: row wrap;
   margin-top: 3rem;
+
 }
 
 /* @TODO: Refactor this */
 .footer-links__social,
 .footer-links__store {
   display: flex;
+  overflow: auto;
   align-items: center;
 }
 
@@ -53,6 +58,13 @@
   margin: 0 1rem;
 }
 
-.social:first-of-type {
+.social:first-of-type,
+.store:first-of-type {
   margin-left: 0;
+}
+
+@media screen and (max-width: 745px) {
+  .footer-links__store {
+    margin-top: 3rem;
+  }
 }
