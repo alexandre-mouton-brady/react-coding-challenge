@@ -28,7 +28,7 @@ export default class Movies extends React.Component {
     const { totalImg } = this.state;
 
     try {
-      const promise = await fetch('/feed/sample.json');
+      const promise = await fetch('/react-coding-challenge/feed/sample.json');
       const { entries } = await promise.json();
 
       const movies = entries
