@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card } from '../components';
 
-export default class Movies extends React.Component {
+export default class Series extends React.Component {
   state = {
-    movies: null,
+    series: null,
     error: false,
   };
 
   componentWillMount() {
-    this.props.setTitle('Popular Movies');
+    this.props.setTitle('Popular Series');
   }
 
   async componentDidMount() {
@@ -16,33 +16,33 @@ export default class Movies extends React.Component {
       const promise = await fetch('/feed/sample.json');
       const { entries } = await promise.json();
 
-      const movies = entries
-        .filter(mov => mov.releaseYear >= 2010 && mov.programType === 'movie')
+      const series = entries
+        .filter(mov => mov.releaseYear >= 2010 && mov.programType === 'series')
         .sort((a, b) => a.title > b.title)
         .slice(0, 26);
 
-      this.setState({ movies });
+      this.setState({ series });
     } catch (err) {
       this.setState({ error: true });
     }
   }
 
   render() {
-    const { movies, error } = this.state;
+    const { series, error } = this.state;
 
-    if (!movies && !error) {
+    if (!series && !error) {
       return <div className="grid content">Loading...</div>;
-    } else if (!movies && error) {
+    } else if (!series && error) {
       return <div className="grid content">Oops, something went wrong...</div>;
     }
 
     return (
       <div className="grid content">
-        {movies.map((movie, i) => (
+        {series.map((serie, i) => (
           <Card
-            title={movie.title}
-            img={movie.images['Poster Art'].url}
-            key={`movie-${i}`}
+            title={serie.title}
+            img={serie.images['Poster Art'].url}
+            key={`serie-${i}`}
             index={i}
           />
         ))}

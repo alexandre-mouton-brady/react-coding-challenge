@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header className="header">
-      <h1 className="header__title">DEMO Streaming</h1>
+      <Link to="/">
+        <h1 className="header__title">DEMO Streaming</h1>
+      </Link>
       <nav className="header-nav">
         <a className="header-nav__item" href="#0">
           Log In
