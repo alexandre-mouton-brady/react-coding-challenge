@@ -25,6 +25,11 @@ Sparky.task('config', () => {
         config: {
           sourceMaps: true,
           presets: ['env', 'stage-1', 'react'],
+          plugins: [
+            'transform-regenerator',
+            'transform-async-to-generator',
+            'syntax-async-functions',
+          ],
         },
       }),
       [

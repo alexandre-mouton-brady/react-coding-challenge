@@ -11,6 +11,8 @@
 
 .card {
   position: relative;
+  opacity: 0;
+  animation: fade-in 300ms ease-in forwards;
 }
 
 .card::after {

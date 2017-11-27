@@ -9,32 +9,38 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexandre-mouton-brady/react-coding-challenge.git"
+    "url":
+      "git+https://github.com/alexandre-mouton-brady/react-coding-challenge.git"
   },
   "keywords": [],
   "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexandre-mouton-brady/react-coding-challenge/issues"
+    "url":
+      "https://github.com/alexandre-mouton-brady/react-coding-challenge/issues"
   },
-  "homepage": "https://github.com/alexandre-mouton-brady/react-coding-challenge#readme",
+  "homepage":
+    "https://github.com/alexandre-mouton-brady/react-coding-challenge#readme",
   "dependencies": {
+    "react": "^16.1.1",
+    "babel-polyfill": "^6.26.0",
+    "react-dom": "^16.1.1"
+  },
+  "devDependencies": {
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "cssnano": "^3.10.0",
     "fuse-box": "^2.5.0-beta.1",
     "postcss": "^6.0.14",
     "postcss-import": "^11.0.0",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "typescript": "^2.6.1",
     "uglify-es": "^3.2.0"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
   }
 }

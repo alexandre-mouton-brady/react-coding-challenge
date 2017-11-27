@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Home } from './pages';
+import { Home, Movies } from './pages';
 import { Header, Footer } from './partials';
 
 export class App extends React.Component {
@@ -22,6 +22,11 @@ export class App extends React.Component {
             exact
             path="/"
             render={() => <Home setTitle={this.setTitle} />}
+          />
+          <Route
+            exact
+            path="/movies"
+            render={() => <Movies setTitle={this.setTitle} />}
           />
         </main>
         <Footer />
