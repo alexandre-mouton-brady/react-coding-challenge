@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const year = new Date().getFullYear;
+  const isProd = process.env.node === 'production';
+  const infix = isProd ? '/react-coding-challenge/' : '/';
 
   return (
     <footer className="footer">
@@ -34,17 +36,17 @@ export default function Footer() {
         <nav className="footer-links__social">
           <img
             className="social"
-            src="/assets/social/facebook-white.svg"
+            src={infix + 'assets/social/facebook-white.svg'}
             alt="facebook"
           />
           <img
             className="social"
-            src="/assets/social/twitter-white.svg"
+            src={infix + 'assets/social/twitter-white.svg'}
             alt="twitter"
           />
           <img
             className="social"
-            src="/assets/social/instagram-white.svg"
+            src={infix + 'assets/social/instagram-white.svg'}
             alt="instagram"
           />
         </nav>
@@ -52,17 +54,17 @@ export default function Footer() {
         <nav className="footer-links__store">
           <img
             className="store"
-            src="/assets/store/app-store.svg"
+            src={infix + 'assets/store/app-store.svg'}
             alt="Apple Store"
           />
           <img
             className="store"
-            src="/assets/store/play-store.svg"
+            src={infix + 'assets/store/play-store.svg'}
             alt="Play Store"
           />
           <img
             className="store"
-            src="/assets/store/windows-store.svg"
+            src={infix + 'assets/store/windows-store.svg'}
             alt="Windows Store"
           />
         </nav>
