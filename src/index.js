@@ -6,8 +6,10 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import './styles/index.css';
 
+const isProd = process.env.node === 'production';
+
 render(
-  <Router>
+  <Router basename={isProd ? '/react-coding-challenge/' : '/'}>
     <App />
   </Router>,
   document.getElementById('root'),
