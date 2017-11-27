@@ -1,5 +1,6 @@
 .content {
   margin: 2rem 10vw;
+  position: relative;
 }
 
 .page-title {
@@ -11,8 +12,11 @@
 
 .card {
   position: relative;
-  opacity: 0;
-  animation: fade-in 300ms ease-in forwards;
+  display: block;
+}
+
+.card--none {
+  display: none;
 }
 
 .card::after {
@@ -38,4 +42,24 @@
 
 .card__caption {
   margin: 1rem 0;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 3rem;
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.hidden {
+  opacity: 0;
 }

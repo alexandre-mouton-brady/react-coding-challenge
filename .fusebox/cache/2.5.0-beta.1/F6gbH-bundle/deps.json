@@ -44,6 +44,22 @@
       "name": "react",
       "version": "16.1.1"
     },
+    "babel-polyfill@6.26.0": {
+      "deps": {
+        "core-js@2.5.1": {
+          "deps": {},
+          "name": "core-js",
+          "version": "2.5.1"
+        },
+        "regenerator-runtime@0.10.5": {
+          "deps": {},
+          "name": "regenerator-runtime",
+          "version": "0.10.5"
+        }
+      },
+      "name": "babel-polyfill",
+      "version": "6.26.0"
+    },
     "react-router-dom@4.2.2": {
       "deps": {
         "warning@3.0.0": {
@@ -107,22 +123,6 @@
       "deps": {},
       "name": "fuse-box-css",
       "version": "0.0.1"
-    },
-    "babel-polyfill@6.26.0": {
-      "deps": {
-        "core-js@2.5.1": {
-          "deps": {},
-          "name": "core-js",
-          "version": "2.5.1"
-        },
-        "regenerator-runtime@0.10.5": {
-          "deps": {},
-          "name": "regenerator-runtime",
-          "version": "0.10.5"
-        }
-      },
-      "name": "babel-polyfill",
-      "version": "6.26.0"
     }
   },
   "flat": {
@@ -201,120 +201,6 @@
         "index.js",
         "factoryWithTypeCheckers.js",
         "factoryWithThrowingShims.js"
-      ]
-    },
-    "react-router-dom@4.2.2": {
-      "name": "react-router-dom",
-      "version": "4.2.2",
-      "files": [
-        "index.js",
-        "BrowserRouter.js",
-        "Router.js",
-        "HashRouter.js",
-        "Link.js",
-        "MemoryRouter.js",
-        "NavLink.js",
-        "Route.js",
-        "Prompt.js",
-        "Redirect.js",
-        "StaticRouter.js",
-        "Switch.js",
-        "matchPath.js",
-        "withRouter.js"
-      ]
-    },
-    "warning@3.0.0": {
-      "name": "warning",
-      "version": "3.0.0",
-      "files": [
-        "browser.js"
-      ]
-    },
-    "history@4.7.2": {
-      "name": "history",
-      "version": "4.7.2",
-      "files": [
-        "createBrowserHistory.js",
-        "LocationUtils.js",
-        "PathUtils.js",
-        "createTransitionManager.js",
-        "DOMUtils.js",
-        "createHashHistory.js",
-        "createMemoryHistory.js",
-        "index.js"
-      ]
-    },
-    "invariant@2.2.2": {
-      "name": "invariant",
-      "version": "2.2.2",
-      "files": [
-        "browser.js"
-      ]
-    },
-    "resolve-pathname@2.2.0": {
-      "name": "resolve-pathname",
-      "version": "2.2.0",
-      "files": [
-        "cjs/index.js"
-      ]
-    },
-    "value-equal@0.4.0": {
-      "name": "value-equal",
-      "version": "0.4.0",
-      "files": [
-        "cjs/index.js"
-      ]
-    },
-    "react-router@4.2.0": {
-      "name": "react-router",
-      "version": "4.2.0",
-      "files": [
-        "Router.js",
-        "MemoryRouter.js",
-        "Route.js",
-        "matchPath.js",
-        "Prompt.js",
-        "Redirect.js",
-        "StaticRouter.js",
-        "Switch.js",
-        "withRouter.js"
-      ]
-    },
-    "path-to-regexp@1.7.0": {
-      "name": "path-to-regexp@1.7.0",
-      "version": "1.7.0",
-      "files": [
-        "index.js"
-      ]
-    },
-    "isarray@0.0.1": {
-      "name": "isarray@0.0.1",
-      "version": "0.0.1",
-      "files": [
-        "index.js"
-      ]
-    },
-    "hoist-non-react-statics@2.3.1": {
-      "name": "hoist-non-react-statics",
-      "version": "2.3.1",
-      "files": [
-        "index.js"
-      ]
-    },
-    "react-dom@16.1.1": {
-      "name": "react-dom",
-      "version": "16.1.1",
-      "files": [
-        "index.js",
-        "cjs/react-dom.production.min.js",
-        "cjs/react-dom.development.js"
-      ]
-    },
-    "fuse-box-css@0.0.1": {
-      "name": "fuse-box-css",
-      "version": "0.0.1",
-      "files": [
-        "index.js"
       ]
     },
     "babel-polyfill@6.26.0": {
@@ -658,6 +544,120 @@
       "version": "0.10.5",
       "files": [
         "runtime.js"
+      ]
+    },
+    "react-router-dom@4.2.2": {
+      "name": "react-router-dom",
+      "version": "4.2.2",
+      "files": [
+        "index.js",
+        "BrowserRouter.js",
+        "Router.js",
+        "HashRouter.js",
+        "Link.js",
+        "MemoryRouter.js",
+        "NavLink.js",
+        "Route.js",
+        "Prompt.js",
+        "Redirect.js",
+        "StaticRouter.js",
+        "Switch.js",
+        "matchPath.js",
+        "withRouter.js"
+      ]
+    },
+    "warning@3.0.0": {
+      "name": "warning",
+      "version": "3.0.0",
+      "files": [
+        "browser.js"
+      ]
+    },
+    "history@4.7.2": {
+      "name": "history",
+      "version": "4.7.2",
+      "files": [
+        "createBrowserHistory.js",
+        "LocationUtils.js",
+        "PathUtils.js",
+        "createTransitionManager.js",
+        "DOMUtils.js",
+        "createHashHistory.js",
+        "createMemoryHistory.js",
+        "index.js"
+      ]
+    },
+    "invariant@2.2.2": {
+      "name": "invariant",
+      "version": "2.2.2",
+      "files": [
+        "browser.js"
+      ]
+    },
+    "resolve-pathname@2.2.0": {
+      "name": "resolve-pathname",
+      "version": "2.2.0",
+      "files": [
+        "cjs/index.js"
+      ]
+    },
+    "value-equal@0.4.0": {
+      "name": "value-equal",
+      "version": "0.4.0",
+      "files": [
+        "cjs/index.js"
+      ]
+    },
+    "react-router@4.2.0": {
+      "name": "react-router",
+      "version": "4.2.0",
+      "files": [
+        "Router.js",
+        "MemoryRouter.js",
+        "Route.js",
+        "matchPath.js",
+        "Prompt.js",
+        "Redirect.js",
+        "StaticRouter.js",
+        "Switch.js",
+        "withRouter.js"
+      ]
+    },
+    "path-to-regexp@1.7.0": {
+      "name": "path-to-regexp@1.7.0",
+      "version": "1.7.0",
+      "files": [
+        "index.js"
+      ]
+    },
+    "isarray@0.0.1": {
+      "name": "isarray@0.0.1",
+      "version": "0.0.1",
+      "files": [
+        "index.js"
+      ]
+    },
+    "hoist-non-react-statics@2.3.1": {
+      "name": "hoist-non-react-statics",
+      "version": "2.3.1",
+      "files": [
+        "index.js"
+      ]
+    },
+    "react-dom@16.1.1": {
+      "name": "react-dom",
+      "version": "16.1.1",
+      "files": [
+        "index.js",
+        "cjs/react-dom.production.min.js",
+        "cjs/react-dom.development.js"
+      ]
+    },
+    "fuse-box-css@0.0.1": {
+      "name": "fuse-box-css",
+      "version": "0.0.1",
+      "files": [
+        "index.js"
       ]
     }
   }
