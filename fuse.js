@@ -45,6 +45,7 @@ Sparky.task('config', () => {
       ],
       WebIndexPlugin({
         template: 'src/index.html',
+        path: '/react-coding-challenge/',
       }),
       isProd &&
         QuantumPlugin({

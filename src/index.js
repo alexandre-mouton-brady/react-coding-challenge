@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import './styles/index.css';
 
 render(
-  <Router>
+  <Router basename="/react-coding-challenge/">
     <App />
   </Router>,
   document.getElementById('root'),
