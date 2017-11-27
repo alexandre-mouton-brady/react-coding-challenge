@@ -40,7 +40,6 @@ Sparky.task('config', () => {
         ]),
         CSSPlugin({
           outFile: name => `dist/${name}`,
-          inject: true,
         }),
       ],
       WebIndexPlugin({
