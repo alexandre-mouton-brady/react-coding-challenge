@@ -7,18 +7,21 @@ export default class Home extends React.Component {
   }
 
   render() {
+    const isProd = process.env.node === 'production';
+    const infix = isProd ? '/react-coding-challenge/' : '/';
+
     return (
       <div className="grid content">
         <Link to="/series" data-title="series" className="card">
           <figure className="card__img">
-            <img src="/assets/placeholder.png" alt="Placeholder" />
+            <img src={infix + 'assets/placeholder.png'} alt="Placeholder" />
           </figure>
           <figcaption className="card__caption">Popular Series</figcaption>
         </Link>
 
         <Link to="/movies" data-title="movies" className="card">
           <figure className="card__img">
-            <img src="/assets/placeholder.png" alt="Placeholder" />
+            <img src={infix + 'assets/placeholder.png'} alt="Placeholder" />
           </figure>
           <figcaption className="card__caption">Popular Films</figcaption>
         </Link>

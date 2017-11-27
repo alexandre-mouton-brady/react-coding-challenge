@@ -29,7 +29,7 @@ export default function Footer() {
         </a>
       </nav>
       <span className="copyright">
-        Copyright &copy; 2016 DEMO Streaming. All Rights Reserved.
+        Copyright &copy; {year} DEMO Streaming. All Rights Reserved.
       </span>
 
       <div className="footer-links">

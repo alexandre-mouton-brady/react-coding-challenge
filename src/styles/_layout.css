@@ -10,12 +10,31 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 40.6vh;
+}
+
 .card {
   position: relative;
   min-width: 140px;
   max-width: 22%;
-  margin-bottom: 1rem;
   display: block;
+  margin: 0 0 1rem 2rem;
+}
+
+@media screen and (max-width: 430px) {
+  .grid {
+    justify-content: center;
+  }
+
+  .card {
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
 
 .card--none {
