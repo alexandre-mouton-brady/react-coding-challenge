@@ -16,7 +16,6 @@ Sparky.task('config', () => {
     homeDir: 'src',
     sourceMaps: !isProd,
     output: 'dist/$name.js',
-    useJsNext: true,
     cache: !isProd,
     log: true,
     debug: true,
@@ -66,19 +65,11 @@ Sparky.task('prodSetup', () => {
 
 // Move the asset folder to the dist folder
 Sparky.task('moveAssets', () => {
-  Sparky.src('./assets/**/*.*').dest('./dist');
-  Sparky.src('./feed/**/*.*').dest('./dist');
-});
-
-// Move the asset folder to the dist folder
-// and watch for them to change in dev
-Sparky.task('watchAssets', () => {
-  Sparky.watch('./assets/**/*.*').dest('./dist');
-  Sparky.watch('./feed/**/*.*').dest('./dist');
+  return Sparky.src(['./assets/**/*.*', './feed/**/*.*']).dest('./dist');
 });
 
 // DEV config
-Sparky.task('dev', ['clean', 'config', 'watchAssets'], () => {
+Sparky.task('dev', ['clean', 'config', 'moveAssets'], () => {
   app.dev();
 
   app

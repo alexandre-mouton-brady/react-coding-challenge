@@ -1,0 +1,58 @@
+.footer {
+  background-color: #414141;
+  color: #fafafa;
+
+  padding: 2rem 10vw;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav__item {
+  padding: 0 1rem;
+  display: block;
+  position: relative;
+}
+
+.footer-nav__item:first-of-type {
+  padding-left: 0;
+}
+
+.footer-nav__item:not(:last-of-type)::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.copyright {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+/* @TODO: Refactor this */
+.footer-links__social,
+.footer-links__store {
+  display: flex;
+  align-items: center;
+}
+
+.social,
+.store {
+  height: 35px;
+  margin: 0 1rem;
+}
+
+.social:first-of-type {
+  margin-left: 0;
+}

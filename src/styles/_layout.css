@@ -1,0 +1,39 @@
+.content {
+  margin: 2rem 10vw;
+}
+
+.page-title {
+  background-color: #414141;
+  color: #fafafa;
+  padding: 0.5rem 10vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.card {
+  position: relative;
+}
+
+.card::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.card__img {
+  height: 300px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  background-color: #1E1E1E;
+}
+
+.card__caption {
+  margin: 1rem 0;
+}

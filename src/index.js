@@ -1,8 +1,13 @@
 import React from 'react';
+import { App } from './App';
 import { render } from 'react-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 import './styles/index.css';
 
-const h1 = <h1>Hello world</h1>;
-
-render(h1, document.getElementById('root'));
+render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root'),
+);
